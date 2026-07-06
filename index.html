@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Artisan Cheese Shop - Digital Recipe Finder">
+  <title>Recipe Finder | Artisan Cheese Shop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header Banner -->
+  <header class="app-header">
+    <div class="header-container">
+      <span class="brand-subtitle">Floor Operations Tool</span>
+      <h1 class="brand-title">Artisan Cheese Shop</h1>
+    </div>
+  </header>
+
+  <!-- Main Workspace -->
+  <main class="app-main">
+    
+    <!-- Search and Filter Section -->
+    <section class="control-section" aria-labelledby="search-heading">
+      <h2 id="search-heading" class="sr-only">Recipe Search</h2>
+      
+      <form id="recipe-search-form" class="search-form" novalidate>
+        <div class="form-group">
+          <label for="search-input" class="form-label">Search Recipe Database</label>
+          <div class="input-wrapper">
+            <input 
+              type="text" 
+              id="search-input" 
+              class="form-input" 
+              placeholder="e.g., Cheddar, Fondue, Appenzeller" 
+              autocomplete="off"
+              aria-describedby="input-error"
+              aria-required="true"
+            >
+            <button type="submit" class="btn btn-primary" aria-label="Search recipes">
+              Search
+            </button>
+          </div>
+          <!-- Accessible error container -->
+          <span class="input-error-msg" id="input-error" role="alert" aria-live="assertive"></span>
+        </div>
+      </form>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section" aria-labelledby="results-heading">
+      <div class="results-header">
+        <h2 id="results-heading" class="section-title">Recipes Directory</h2>
+        <!-- Live region to announce search results to screen readers -->
+        <span class="sr-only" id="aria-announcer" role="status" aria-live="polite"></span>
+      </div>
+
+      <!-- State containers dynamically populated by JS -->
+      <div id="recipe-display-container" class="recipe-grid">
+        <!-- Initial helper visual screen state -->
+        <div class="empty-state">
+          <p>Please enter a cheese type or recipe name above to search our active inventory database.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="app-footer">
+    <p>&copy; 2026 Artisan Cheese Shop Internal Systems. All rights reserved.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
