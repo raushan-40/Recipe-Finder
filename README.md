@@ -203,7 +203,7 @@ This project is licensed under the MIT License.
 **Raushan Kumar**
 
 - GitHub: https://github.com/raushan-40
-- LinkedIn: Add your LinkedIn profile here
+- LinkedIn: https://www.linkedin.com/in/raushankumariitp/
 
 ---
 
